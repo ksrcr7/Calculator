@@ -69,3 +69,8 @@ calc::Token calc::Lexer::peek() {
         return peek_tok;
     }
 }
+
+calc::Lexer::Lexer(std::string_view INPUT) {
+    input = INPUT;
+    has_peek = false;
+}
