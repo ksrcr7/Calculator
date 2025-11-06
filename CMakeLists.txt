@@ -15,6 +15,7 @@ add_library(calc
         include/calc/Lexer.h
         src/Lexer.cpp
         include/calc/Parser.h
+        src/Parser.cpp
 )
 target_include_directories(calc PUBLIC
         ${CMAKE_SOURCE_DIR}/include

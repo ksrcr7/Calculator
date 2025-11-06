@@ -18,6 +18,7 @@ namespace calc{
     };
 
     class Calculator{
+    public:
         Calculator() = default;
         ~Calculator() = default;
 
