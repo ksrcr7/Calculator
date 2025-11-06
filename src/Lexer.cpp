@@ -57,3 +57,15 @@ calc::Token calc::Lexer::next() {
     return Token{TokenType::Invalid,0.0};
 
 }
+
+calc::Token calc::Lexer::peek() {
+    if(has_peek){
+        return peek_tok;
+    }
+
+    else{
+        peek_tok = this->next();
+        has_peek = true;
+        return peek_tok;
+    }
+}
