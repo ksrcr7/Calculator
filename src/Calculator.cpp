@@ -38,10 +38,10 @@ namespace calc{
             return out;
         }
 
-
-
-
-
+        out.value = value;
+        out.error = Error::None;
+        out.message.clear();
+        return out;
 
     }}
 
