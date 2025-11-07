@@ -25,7 +25,7 @@ namespace calc{
         std::string message;
         Error error = Error::None;
         Lexer* lexer = nullptr;
-        bool had_error = false;
+        bool had_error;
 
     };
 }
