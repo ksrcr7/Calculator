@@ -104,4 +104,24 @@ namespace calc {
         return 0.0;
 
     }
+
+    Token Parser::peek() {
+        Token t = lexer->peek();
+        if(t.type == TokenType::Invalid){
+            had_error = true;
+            error = Error::UnexpectedChar;
+            message = "unexpected character in input";
+        }
+        return t;
+    }
+
+    Token Parser::next() {
+        Token t = lexer->next();
+        if(t.type == TokenType::Invalid){
+            had_error = true;
+            error = Error::UnexpectedChar;
+            message = "unexpected character in input";
+        }
+        return t;
+    }
 }
