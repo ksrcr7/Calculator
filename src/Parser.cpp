@@ -124,4 +124,13 @@ namespace calc {
         }
         return t;
     }
+
+    bool Parser::match(TokenType expected) {
+        Token t = peek();
+        if(t.type == expected){
+            next();
+            return true;
+        }
+        return false;
+    }
 }
