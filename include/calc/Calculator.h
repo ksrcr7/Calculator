@@ -22,7 +22,7 @@ namespace calc{
         Calculator() = default;
         ~Calculator() = default;
 
-        static Result evaluate(std::string_view expression)noexcept;
+        Result evaluate(std::string_view expression)noexcept;
 
     };
 }
