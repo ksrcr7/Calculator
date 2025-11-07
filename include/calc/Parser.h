@@ -15,6 +15,10 @@ namespace calc{
     public:
         explicit Parser(calc::Lexer &);
         double parsExpression();
+        [[nodiscard]] bool ok()const;
+        [[nodiscard]] Error errorCode()const;
+        [[nodiscard]] const std::string& errorMessage()const;
+        bool atEnd();
 
     private:
         double parsTerm();

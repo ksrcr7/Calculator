@@ -133,4 +133,21 @@ namespace calc {
         }
         return false;
     }
+
+    bool Parser::ok() const {
+        return had_error;
+    }
+
+    Error Parser::errorCode() const {
+        return error;
+    }
+
+    const std::string &Parser::errorMessage() const {
+        return message;
+    }
+
+    bool Parser::atEnd() {
+        Token t = peek();
+        return t.type == TokenType::End;
+    }
 }
